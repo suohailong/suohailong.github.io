@@ -1,10 +1,13 @@
 
-update:
-	git submodule update --init --recursive
+search:
+	bundle exec just-the-docs rake search:init
 
-build:
+update:
+	git submodule update --recursive
+
+build:search
 	bundle install
 	bundle exec jekyll build
 
-local:
+local:search
 	bundle exec jekyll serve
