@@ -1,0 +1,192 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="/assets/css/just-the-docs-default.css"> <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"> <style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(2)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(2) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(4) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(4) > ul > li:nth-child(2) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(4) > ul.nav-list > li.nav-list-item:nth-child(2) > ul.nav-list { display: block; } </style> <script src="/assets/js/vendor/lunr.min.js"></script> <script src="/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>计算机组成原理详解 | Technical blog</title> <meta name="generator" content="Jekyll v4.4.1" /> <meta property="og:title" content="计算机组成原理详解" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="计算机硬件系统的基础知识，包括计算机的基本组成、性能衡量、指令系统、存储系统等核心概念" /> <meta property="og:description" content="计算机硬件系统的基础知识，包括计算机的基本组成、性能衡量、指令系统、存储系统等核心概念" /> <link rel="canonical" href="http://localhost:4000/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86.html" /> <meta property="og:url" content="http://localhost:4000/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86.html" /> <meta property="og:site_name" content="Technical blog" /> <meta property="og:type" content="article" /> <meta property="article:published_time" content="2024-03-17T00:00:00+08:00" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="计算机组成原理详解" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-03-17T00:00:00+08:00","datePublished":"2024-03-17T00:00:00+08:00","description":"计算机硬件系统的基础知识，包括计算机的基本组成、性能衡量、指令系统、存储系统等核心概念","headline":"计算机组成原理详解","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86.html"},"url":"http://localhost:4000/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86.html"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewBox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewBox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/> </svg> </symbol> <symbol id="svg-copied" viewBox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header" role="banner"> <a href="/" class="site-title lh-tight"> Technical blog </a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Home</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in 效率工厂 category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/" class="nav-list-link">效率工厂</a><ul class="nav-list"><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/%E5%91%BD%E4%BB%A4.html" class="nav-list-link">常用命令行工具集</a></li><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/grpCurl.html" class="nav-list-link">gRPCurl 使用指南</a></li><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/%E7%BD%91%E7%BB%9C%E8%B0%83%E4%BC%98.html" class="nav-list-link">网络调优与抓包分析</a></li><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/virtualbox.html" class="nav-list-link">VirtualBox 使用指南</a></li><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/go%20%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7.html" class="nav-list-link">Go 性能优化工具指南</a></li><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/git.html" class="nav-list-link">Git 使用指南</a></li><li class="nav-list-item"><a href="/docs/%E6%95%88%E7%8E%87%E5%B7%A5%E5%8E%82/vim.html" class="nav-list-link">Vim 编辑器使用指南</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in 架构设计 category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/docs/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" class="nav-list-link">架构设计</a><ul class="nav-list"><li class="nav-list-item"><a href="/docs/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E8%AE%BA.html" class="nav-list-link">系统架构设计方法论</a></li><li class="nav-list-item"><a href="/docs/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E5%9E%8B.html" class="nav-list-link">数据库选型指南</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in 打铁还需自身硬 category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/" class="nav-list-link">打铁还需自身硬</a><ul class="nav-list"><li class="nav-list-item"><a href="/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.html" class="nav-list-link">操作系统原理与实践</a></li><li class="nav-list-item"><a href="/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86.html" class="nav-list-link">计算机组成原理详解</a></li><li class="nav-list-item"><a href="/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/%E7%BD%91%E7%BB%9C%E5%8E%9F%E7%90%86.html" class="nav-list-link">计算机网络原理与实践</a></li></ul></li></ul> </nav> <footer class="site-footer"> This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll. </footer> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search" role="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Technical blog" aria-label="Search Technical blog" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> </div> <div class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="/docs/%E6%89%93%E9%93%81%E8%BF%98%E9%9C%80%E8%87%AA%E8%BA%AB%E7%A1%AC/">打铁还需自身硬</a></li> <li class="breadcrumb-nav-list-item"><span>计算机组成原理详解</span></li> </ol> </nav> <div id="main-content" class="main-content"> <main> <h1 id="计算机组成原理"> <a href="#计算机组成原理" class="anchor-heading" aria-labelledby="计算机组成原理"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 计算机组成原理 </h1> <h2 id="1-入门篇"> <a href="#1-入门篇" class="anchor-heading" aria-labelledby="1-入门篇"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. 入门篇 </h2> <h3 id="1-计算机的组成"> <a href="#1-计算机的组成" class="anchor-heading" aria-labelledby="1-计算机的组成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. 计算机的组成 </h3> <p>任何一台计算机都是由： 运算器、控制器、存储器，输入输出设备组成。 如下图： <img src="../_resources/9EF83160-CF4E-45CC-836B-0F17E589C619.png" alt="" /></p> <h3 id="2-衡量计算机的性能"> <a href="#2-衡量计算机的性能" class="anchor-heading" aria-labelledby="2-衡量计算机的性能"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. 衡量计算机的性能 </h3> <ol> <li>响应时间：执行一个程序要花多长时间</li> <li>吞吐率： 指的是一定时间范围我们能做多少事。</li> <li>性能 = 1/响应时间 | 程序的响应时间=cpu时钟周期数* 时钟周期时间 | 时钟周期时间(cpu执行一条指令的时间) = 1/cpu主频。| cpu时钟周期数 = 指令数 x 每条指令的平均时钟周期数 。</li> <li>如何优化响应时间：提高主频， 编译器优化减少指令数，cpu流水线减少一条指令的时钟周期。</li> <li>如何提高吞吐率：多核， 提升制程（也就是缩小晶体管的体积进而在单位面积上增加晶体管的数量）。提高主频和提升制程都容易造成cpu功耗太高。</li> <li>其他优化方法：</li> </ol> <ul> <li>加速大概率事件， 例如机器学习使用gpu进行优化</li> <li>通过流水线提高性能</li> <li>通过预测提高性能，例如 分支和冒险，局部性原理</li> </ul> <h2 id="2-指令和运算"> <a href="#2-指令和运算" class="anchor-heading" aria-labelledby="2-指令和运算"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. 指令和运算 </h2> <h3 id="1-指令"> <a href="#1-指令" class="anchor-heading" aria-labelledby="1-指令"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. 指令 </h3> <ol> <li>程序如何变成计算机指令： 高级语言-汇编语言-机器码</li> <li>汇编指令和机器码是一一对应的。不同的指令集也就是不同的汇编码和不同的机器码。</li> <li>指令就是一个数，位数一般和cpu的位数相同。比如32位机器的指令一般也是32位。下图是32位MIPS指令， <img src="../_resources/7C14CD1C-8118-4914-8B9B-FD29D07B96E8.png" alt="" /></li> <li>指令的分类：</li> </ol> <ul> <li>算术类指令</li> <li>数据传送类指令</li> <li>逻辑类指令</li> <li>条件分支类指令</li> <li>无条件跳转类指令</li> </ul> <ol> <li>计算机的寄存器类型：</li> </ol> <ul> <li>pc 寄存器：存储下一条将要执行的指令</li> <li>指令寄存器：存储当前正在执行的指令</li> <li>条件码寄存器：一些标志位，用来存储是否有进位，是否溢出，零标志条件吗（bool运算的标志）</li> <li>数据寄存器和地址寄存器。就是分别用来存储数据和地址的寄存器，其中既能存储地址也能存储数据的寄存器叫做通用寄存器。</li> </ul> <ol> <li>if/else 编译成机器指令为cmp jne和 jmp 其中jmp是向后跳转。具体如下：</li> </ol> <p>``` {style=”line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;”} if (r == 0) 3b: 83 7d fc 00 cmp DWORD PTR [rbp-0x4],0x0 3f: 75 09 jne 4a &lt;main+0x4a // r==0 被编译成了 cmp和jne两条指令，cmp 比较r==0 去置位条件码寄存器的零标志位， jne 通过读取标志位决定 跳转还是不跳转。 { a = 1; 41: c7 45 f8 01 00 00 00 mov DWORD PTR [rbp-0x8],0x1 48: eb 07 jmp 51 &lt;main+0x51 } else { a = 2; 4a: c7 45 f8 02 00 00 00 mov DWORD PTR [rbp-0x8],0x2 51: b8 00 00 00 00 mov eax,0x0 }</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+  7.while/for 编译成机器指令是jmp cmp和jle 其中jle向前跳转的。
+
+``` {style="line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;"}
+    for (int i = 0; i &lt;= 2; i++)
+   b:   c7 45 f8 00 00 00 00 mov    DWORD PTR [rbp-0x4],0x0 
+  12:   eb 0a                    jmp    1e //mov i=0 并直接跳转到cmp 指令。
+    {
+        a += i;
+  14:   8b 45 f8                mov    eax,DWORD PTR [rbp-0x4]
+  17:   01 45 fc                add    DWORD PTR [rbp-0x8],eax
+
+  1a:   83 45 f8 01             add    DWORD PTR [rbp-0x4],0x1
+  1e:   83 7d f8 02             cmp    DWORD PTR [rbp-0x4],0x2
+  22:   7e f0                   jle    14 // 跳回上边位置
+  24:   b8 00 00 00 00          mov    eax,0x0
+    }
+</code></pre></div></div> <ol> <li>函数编译成指令如何执行</li> </ol> <p>``` {style=”line-height: 160%; box-sizing: content-box; border: 0; border-radius: 0; margin: 2px 0 8px; background-color: #f5f7f8;”} int static add(int a, int b) { 0: 55 push rbp // 基址指针寄存器 指向当前栈的底部 1: 48 89 e5 mov rbp,rsp // rsp 栈指针寄存器，指向当前栈顶 4: 89 7d fc mov DWORD PTR [rbp-0x4],edi 7: 89 75 f8 mov DWORD PTR [rbp-0x8],esi return a+b; a: 8b 55 fc mov edx,DWORD PTR [rbp-0x4] d: 8b 45 f8 mov eax,DWORD PTR [rbp-0x8] 10: 01 d0 add eax,edx } 12: 5d pop rbp 13: c3 ret <br /> 0000000000000014 &lt;main: int main() { 14: 55 push rbp 15: 48 89 e5 mov rbp,rsp 18: 48 83 ec 10 sub rsp,0x10 int x = 5; 1c: c7 45 fc 05 00 00 00 mov DWORD PTR [rbp-0x4],0x5 int y = 10; 23: c7 45 f8 0a 00 00 00 mov DWORD PTR [rbp-0x8],0xa int u = add(x, y); 2a: 8b 55 f8 mov edx,DWORD PTR [rbp-0x8] 2d: 8b 45 fc mov eax,DWORD PTR [rbp-0x4] 30: 89 d6 mov esi,edx 32: 89 c7 mov edi,eax // 以上指令为参数赋值 34: e8 c7 ff ff ff call 0 &lt;add // 函数调用被翻译成了call 指令，其中call指令能跳转到add函数地址，并将返回地址压栈 39: 89 45 f4 mov DWORD PTR [rbp-0xc],eax 3c: b8 00 00 00 00 mov eax,0x0 } 41: c9 leave<br /> 42: c3 ret // 弹出call指令压入的返回地址，然后跳回到该地址</p> <p>如果函数中没有调用其他函数的话，编译器可以通过函数内联进行性能优化。 函数如果调用层次太深可能出现栈溢出问题 ```</p> <h3 id="2-程序如何执行"> <a href="#2-程序如何执行" class="anchor-heading" aria-labelledby="2-程序如何执行"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. 程序如何执行 </h3> <ol> <li>高级语言-汇编码-机器码 - 执行 这个过程由两个部分组成</li> </ol> <ul> <li>第一部分： 编译，汇编，链接 生成可执行文件</li> <li>第二部分：装载器（loader) 把可执行文件装载到内存,变成数据和指令，cpu从内存中读取指令和数据真正开始执行。 <img src="../_resources/6295F89E-B0D4-471B-A141-490255D63AB1.png" alt="" /></li> </ul> <ol> <li>linux下的可执行文件是ELF格式。ELF格式由以下几个部分组成:</li> </ol> <ul> <li>.text Section （代码段）：用来保存程序的代码和指令</li> <li>.data Section（数据段）：用来保存程序里设置好的初始化数据信息</li> <li>.rel.text Section（重定位表）：保留了当前文件中我们在链接之前不知道的一些跳转地址，比如库函数printf</li> <li>.symbol Section（符号表）：保留了当前文件里定义的函数及全局变量名称机和他们对应的虚拟内存地址 <img src="../_resources/FADE12F7-054F-4A1E-8E2F-E76BAB771EEE.png" alt="" /></li> </ul> <ol> <li>链接器的作用是扫描所有的目标文件，将所有符号表里的信息收集起来，构成一个全局的符号表，然后在根据重定位表，将之前不知道的函数挑战地址等修正为正确的内存地址。最后将所有目标文件的对应数据段，代码段进行一次合并，变成了最终的可执行代码。</li> <li>装载器的的加载要求</li> </ol> <ul> <li>可执行文件占用的内存应该是连续的</li> <li>加载器需要同时加载很多个程序，并且不能让程序自己规定在内存总加载的位置。解决这两个问题的方法就是内存映射（可执行文件中的地址都是虚拟地址，装载器在加载可执行文件的时候将虚拟地址映射成物理地址）</li> </ul> <ol> <li>内存映射的方法</li> </ol> <ul> <li>内存分段 <img src="../_resources/D188D7BD-9692-446C-9112-35D853741503.png" alt="" /></li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>说明：
+装载器为每个程序寻找一块连续的内存空间，然后做好内存映射。优点就是解决了同时加载多个程序并不会造成内存地址冲突。缺点是
+内存碎片
+如图：![](../_resources/29D21C49-43C6-4B2E-B5EE-75B0CAB11A44.png)
+两个剩余的128M空间是无法利用的。解决办法就是内存交换
+可以先将Python程序交换到硬盘，在重新加载进来但不是原来的位置。但是也有性能瓶颈每次交换都是整个程序交换，太耗时。
+</code></pre></div></div> <ul> <li>内存分页</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  背景：分页就是为了优化内存分段的问题，碎片化及发生交换时比较耗时
+2.  原理：和分段把一大段连续的空间分配给整个程序相比，分页时将物理内存分成固定大小的页，linux中一页为4K
+3.  优点：装载器在装载程序时不用把全部的程序装载到内存，装载器可以做好内存映射后，并不把页加载到物理内存，而是在程序运行过程中，需要用到内存页里的数据和指令时，再通过触发cpu的缺页异常将页加载到内存。这样减少了内存碎片化同时再内存换出的时候可以减少换出的内存大小从而减少换出耗时。
+</code></pre></div></div> <ol> <li>链接可以分为动态链接和静态链接</li> </ol> <ul> <li>静态链接： 就是将不同的目标文件链接到同一个目标文件。缺点：当多个程序共享一个库时，在链接的时候相当于每个程序都将共享库文件的内容合并到了当前文件。比较浪费内存空间。</li> <li>动态链接：动态链接的内容并不是目标文件，而是已经加载到内存的共享库。linux下为.so文件，windows下为.dll文件。如图： <img src="../_resources/3CA8F92B-3A83-4941-80D1-8E4EBB2BBC03.png" alt="" /></li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>说明：
+   
+ -   共享库中的指令代码必须是指令无关的，也就是不管加载到内存的那个位置都能运行。
+ -   虽然共享库用的都是同一段物理地址，但是在链接到每个程序中的虚拟地址不同
+ -   动态库中的函数和变量都使用相对与加载位置的相对对地址
+ -   实现动态链接：
+
+   动态库链接生成的ELF执行文件和静态链接的符号表和重定向表相似，对应的有plt表和GOT表，plt表里存了对应的函数名、全局变量名及在Got表中的位置，GOT表保存了具体的函数地址。GOT表存在于共享库的.data
+   section，每个调用共享库的程序都加载一份Got表。当需要使用共享库的函数时再从GOT表中查询对应的函数地址。
+   我们的 GOT 表位于共享库自己的数据段里。GOT
+   表在内存里和对应的代码段位置之间的偏移量时钟是确定的
+   GOT
+   表里的数据，则是在我们加载一个个共享库的时候写进去的。类似于动态绑定。
+</code></pre></div></div> <h3 id="3-计算机中数字字符浮点数的二进制形式"> <a href="#3-计算机中数字字符浮点数的二进制形式" class="anchor-heading" aria-labelledby="3-计算机中数字字符浮点数的二进制形式"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3. 计算机中数字，字符，浮点数的二进制形式 </h3> <ul> <li>数字的二进制表示</li> </ul> <ol> <li>原码：将最高位作为符号位，其他数字为代表数值本身，0表示整数，1表示负数</li> <li>反码：如果是正数则和原码相同，如果是负数则保留符号位，其他位按位取反</li> <li>补码：如果是正数表示方法和原码一样，如果是负数则将数字的反码+1就是补码。负数使用补码的好处就是整数相加不需要任何的特殊处理，只是把他当成普通的二进制相加就能得到正确的结果。</li> </ol> <ul> <li>字符的表示： 英文字符用ascii码，8位代表一个字符。其他语言比如中文一般用utf-8编码。</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>字符集和字符便码： unicode
+是一个字符集，这个字符集收录了150万种语言，utf-8, utf-16
+及gb2312是对unicode中的字符进行的一种编码方式
+</code></pre></div></div> <ul> <li>浮点数的二进制表示:</li> </ul> <ol> <li>定点数：32位数，用4个比特来表示0-9，则32位可以表示8个这样的数，我们用最左边的6个表示整数部分，最右边的两个数表示小数部分，这样的表示方式就是bcd便码，也就是定点数。小数点固定。缺点就是表示的数值范围不大，小数位数也不多。一般用在超市，银行等小数位数少的地方，这样的编码较为直观清晰</li> <li>浮点数：在计算机中用科学表示法来表示浮点数，也就是iEEE标准 <img src="../_resources/73F2F1D9-B5C7-4139-8F22-D59FFED58B5D.png" alt="" /> <img src="../_resources/7AD20078-0007-4B8D-89D9-7DF482F65765.png" alt="" /></li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 说明：指数位8位数 表示-127到+126的范围。
+ 要表示0和一些特殊数，如图：
+ ![](../_resources/1567CA9F-668C-4DD4-9959-3460E60088E0.png)
+ 浮点数这样的表示也就决定了，浮点数只是近似值没有办法精确表示一个数，因此0.3+0.6
+ != 0.9
+ 问题：
+ 十进制数如何转换为二进制浮点数：整数部分直接转成二进制数，小数部分循环乘以2
+ 浮点数如何相加：先对齐再计算，先对齐指的是小数点对齐。1.2
+ +12.3
+ 浮点数相加的精度损失是什么：
+ 浮点数相加如何解决精度损失
+</code></pre></div></div> <h3 id="3处理器"> <a href="#3处理器" class="anchor-heading" aria-labelledby="3处理器"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.处理器 </h3> <h4 id="1-指令周期cpu周期或机器周期时钟周期"> <a href="#1-指令周期cpu周期或机器周期时钟周期" class="anchor-heading" aria-labelledby="1-指令周期cpu周期或机器周期时钟周期"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. 指令周期、cpu周期或机器周期、时钟周期 </h4> <ul> <li>时钟周期：cpu的最小时间间隔，主频的倒数</li> <li>机器周期：从内存里面读一条指令的最短时间</li> <li>指令周期： 执行一条指令通常需要取指，译码，执行，访存，回写等步骤，执行每个步骤通常需要一个时钟周期。这些时钟周期就组成了一个指令周期</li> </ul> <h4 id="2-cpu所需要的硬件电路"> <a href="#2-cpu所需要的硬件电路" class="anchor-heading" aria-labelledby="2-cpu所需要的硬件电路"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. cpu所需要的硬件电路 </h4> <p><img src="../_resources/E05AEFDC-182D-46DD-8D1E-4EDE276BC440.png" alt="" /> 说明：自动计数器就是pc寄存器</p> <h2 id="3-cpu-并发设计"> <a href="#3-cpu-并发设计" class="anchor-heading" aria-labelledby="3-cpu-并发设计"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3. CPU 并发设计 </h2> <h3 id="1-流水线"> <a href="#1-流水线" class="anchor-heading" aria-labelledby="1-流水线"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. 流水线 </h3> <ul> <li>为什么需要流水线</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>相较于单指令周期的cpu，一条一条顺序执行，流水线的设计在同一个时钟周期内运行多条指令的多个阶段。提高了cpu的吞吐
+</code></pre></div></div> <ul> <li>流水线的原理</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![](../_resources/FD1FE0CD-7840-4671-BA79-68342A9DD833.png)
+说明:
+首先一条指令拆分成多个步骤，如上图，为五级流水线，同一个时钟周期可以运行不同指令的不同阶段。
+</code></pre></div></div> <ul> <li>流水线的缺陷</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  流水线不是越多越好，每增加一级就多一级写到流水线寄存器的操作，就会增加一条指令的处理时间。同时也增加了功耗和散热的设备，因为增加了电路。
+2.  流水线技术并不能缩短单条指令的响应时间，但是可以增加在运行很多条指令时候的吞吐
+3.  必须解决好冒险的依赖关系
+</code></pre></div></div> <h3 id="2-如何解决流水线冒险"> <a href="#2-如何解决流水线冒险" class="anchor-heading" aria-labelledby="2-如何解决流水线冒险"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. 如何解决流水线冒险 </h3> <ul> <li>冒险的分类</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  结构冒险：
+    cpu在同一个时钟周期，同时运行两条计算指令的不同阶段，但是这两个阶段可能用到同一个硬件电路
+    ![](../_resources/AF6EED7A-142E-45FB-A1B0-7A5BE65D8DD9.png)
+   
+ 解决方案：增加硬件资源，比如对于访问内存数据和指令的冲突，就是将cpu缓存分成指令缓存和数据缓存。也就是缓存采用哈佛结构
+ ![](../_resources/D9443BD4-5229-48D8-BEF7-E5B25AA3459C.png)
+   
+2.  数据冒险：同时**执行**的多个指令之间有数据依赖的情况。对应三种情况，先写后读，先读后写，写完在写。
+   
+ 解决方案:
+
+  -   流水线停顿：
+      如果发现后边执行的指令会对前边执行的指令有数据层面的依赖，就在等等。缺点是插入过多的NOP操作，造成了性能下降
+ 
+   ![](../_resources/7269B3C1-0285-45A5-8658-6126F17FC4DC.png)
+ 
+  -   操作数前推：如果下一条指令依赖上一条指令的结果，上一条指令在ALU执行完成后可以将结果直接发送给下一条指令执行。而不必等上一条指令写回到寄存器。再去取。
+  -   乱序执行：将没有依赖的指令发给不同的ALU功能单元同时执行。
+ 
+   ![](../_resources/D3F4A2D0-DBA4-4602-8DED-CA49A6CEDB7C.jpg)
+   说明:
+   上图RS功能就是指令分类，分发执行。重排缓存区会按照cpu取指令的顺序对指令结果重新排序。
+   
+3.  控制冒险：if/else等控制语句，只有执行后才知道下一条指令去哪取。这中间的等待延迟就是控制冒险。
+   
+ 解决方案：
+
+  -   缩短分支延迟：在指令译码阶段提供条件判断与地址跳转的电路，使得等待时间变短。
+  -   分支预测
+ 
+   静态预测：就是假装分支不发生，也就是说只猜不跳转的情况，猜对的概率在50%
+   动态分支预测：一级分支预测，就是用1比特来记录当前分支的情况，根据当前分支情况预测下一次分支情况。二级分支预测就是用2个比特记录当前和上一次的分支情况。根据上两次的分支结果预测下一次分支情况。
+</code></pre></div></div> <h3 id="2-超标量"> <a href="#2-超标量" class="anchor-heading" aria-labelledby="2-超标量"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. 超标量 </h3> <p>通过增加硬件的方式，在取指，译码阶段也实现并行的处理方式。可以一次性从内存里面取出多条指令。然后发送给多个并行的指令译码器，最后交给不同功能的ALU去执行。使的ipc大于1， <img src="../_resources/36B81F68-A7AC-4E19-AF65-7C263CEC3FB2.png" alt="" /></p> <h3 id="3-超线程和simd"> <a href="#3-超线程和simd" class="anchor-heading" aria-labelledby="3-超线程和simd"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3. 超线程和SIMD </h3> <ul> <li>超线程 <img src="../_resources/995D29F9-12B7-43CA-9660-F764D537C170.png" alt="" /> 超线程的目的就是让一个线程A的指令在流水线停顿的时候，去执行线程B的指令，这也是两套指令寄存器，pc寄存器，条件吗寄存器存在的意义。</li> <li>SIMD（单指令多数据流） <img src="../_resources/5B0A0CE7-5ABA-44B8-B5E2-AE59CBA7D222.png" alt="" /> <strong>SIMD指令</strong>在获取数据和执行指令时都能并行，它是通过增加硬件的方式，一次性读取多个数据，并行执行。适用于大数据量数据并行的应用，比如向量运算，矩阵运算等。 <h3 id="2-异常"> <a href="#2-异常" class="anchor-heading" aria-labelledby="2-异常"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2. 异常 </h3> </li> <li>中断、陷进、故障、中止统称为异常</li> <li>中断向量一般是有操作系统分配的，而异常是cpu预先分配的。</li> <li>中断是指来自于cpu外部的的信号，打断当前程序的执行.一般是i/o设备信号</li> <li>陷进是指程序员故意主动触发的异常。比如系统调用</li> <li>故障是指程序运行过程中出现了错误，比如加法溢出。故障和中断及陷进的区别是故障在异常程序处理完成后任然回到当前指令，而不是去执行下一条指令。</li> <li>中止是故障的一种，指不可恢复的故障 <img src="../_resources/64377AC4-4E4C-4A97-90AF-1BF3B447BBC6.png" alt="" /></li> </ul> <p>### 3 处理器的其他架构</p> <ol> <li>指令集的分类: CISC(复杂指令) 、 RISC(精简指令） <img src="../_resources/EAFF125A-F30E-4800-9314-013F2E327B00.png" alt="" /></li> <li>FPGA和ASIC</li> </ol> <p>FPGA: 现场可编程门阵列，这块芯片上有密密麻麻的门电路，可以通过编程控制这些门电路实现各种各样的硬件。 ASIC：为了专门用途而设计的一种芯片，比如tpu，GPU等</p> <ol> <li>GPU: 专门为处理图形渲染而设计的一种处理器，现在也大量用作机器学习的训练</li> <li>TPU: 专为深度学习的推断过程的计算而设计的一种处理器。</li> </ol> <h2 id="4存储与io系统"> <a href="#4存储与io系统" class="anchor-heading" aria-labelledby="4存储与io系统"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.存储与I/O系统 </h2> <h3 id="1-存储"> <a href="#1-存储" class="anchor-heading" aria-labelledby="1-存储"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1. 存储 </h3> <h4 id="全景层次"> <a href="#全景层次" class="anchor-heading" aria-labelledby="全景层次"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 全景层次 </h4> <p><img src="../_resources/10527D76-8FCE-4AFE-A2F0-FCA27EBAAAE4.png" alt="" /></p> <h4 id="各存储器的性能差异"> <a href="#各存储器的性能差异" class="anchor-heading" aria-labelledby="各存储器的性能差异"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 各存储器的性能差异 </h4> <p><img src="../_resources/2AE93396-0E31-4709-A98E-A9546F30E44F.png" alt="" /></p> <h4 id="局部性原理"> <a href="#局部性原理" class="anchor-heading" aria-labelledby="局部性原理"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 局部性原理： </h4> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  时间局部性原理：如果一个数据被访问了，那么它在短时间之内还会被再次访问
+2.  空间局部性原理：如果一个数据被访问了，那么和它相邻的数据也很快会被访问。
+</code></pre></div></div> <h4 id="高速缓存"> <a href="#高速缓存" class="anchor-heading" aria-labelledby="高速缓存"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 高速缓存 </h4> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  每个cpu 都有一个L1缓存和L2缓存，L3是多个cpu共享的，
+    L1分为指令L1和数据L1
+   
+ ![](../_resources/1EEE937F-D824-4656-A903-8A9B53F8F368.png)
+   
+2.  cpu
+    从内存中读取数据到缓存是一块一块的来读取数据的，通常一个块的大小是64字节
+3.  cpu 无论数据在cache中存在与否，总是先读取cache
+4.  CPU 读取缓存数据的时候是一个字一个字读取的。
+5.  内存数据加载到cache的映射机制：
+   
+ -   cpu发出的内存地址 = 组标记 + 索引 + Offset
+ -   cache 中的block由 索引 + 有效位 + 组标记 + 数据
+     ![](../_resources/39FF731D-2699-4605-BEC6-B18157BA59E8.png)
+   
+6.  cpu读取内存数据的步骤：
+   
+ -   根据内存地位，计算索引值
+ -   根据索引值定位到缓存块， 判断该缓存块有效。
+ -   对比内存高位的组标记和cache的组标记，确认cache中的数据是我们要访问的内存数据
+ -   根据内存地址的Offset位，从cache中对应的data
+     block中获取对应的字
+ -   如果在2，3步骤中，cpu发现数据不是要访问的，那cpu就会访问内存，并把对应的block
+     data 更新到cache中。同时更新对应的有效位和组标记的数据。
+   
+7.  volatile：
+    确保我们对变量的读取和写入都一定会同步到主存里，而不经过cache
+8.  高速缓存的写策略：
+   
+ -   写直达：每次数据写都写到主存里
+ -   写回：每次写入都写到cpu
+     cache里。具体逻辑是：更新cache时如果cache中对应block是要更新的内存地址的数据则直接更新并标记为脏，如果不是则检测是否为脏，为脏则同步旧数据到内存，再将新数据更新到cache并标记为脏。
+     cpu从内存中加载数据到cache时，如果发现为脏先同步再加载。
+   
+9.  MESI 保证解决多核cpu的缓存一致性
+   
+ 缓存一致性必须满足的条件：写传播，事务串行化(对数据更改的顺序不变)。
+ 总线嗅探机制：这个机制可以实现写传播，即每一个cpu对缓存数据的更改都通过总线传播给其他cpu，其他CPU只需要监听总线做出反应就可以了。
+ 实现缓存一致的策略：
+
+  -   写失效：同一时间只能有一个cpu写，写完后广播一个"失效"请求，其他cpu将缓存置为失效。
+  -   写广播： 一个cpu的写入，广播给其它cpu, 让其他cpu也去更新
+
+ MESI(写失效机制)协议
+
+  1.  M E S I 分别代表cache line的四种状态， M
+      已修改，E：独占(当前数据只有当前cpu有) S:
+      共享（所有cpu都有一份数据） I：代表失效。
+  2.  cache line在
+      E和S状态时，代表数据是干净的也就是说主存一致的。
+  3.  共享状态下不能直接修改数据，需要通过广播失效信号，让其他cpu将他们缓存中的数据置位无效后才能更改。
+  4.  MESI状态流转图如下
+      ![](../_resources/454156B1-8EFC-40B6-866E-C1E92185EC94.png)
+</code></pre></div></div> <h4 id="虚拟内存"> <a href="#虚拟内存" class="anchor-heading" aria-labelledby="虚拟内存"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 虚拟内存： </h4> <ol> <li>页表： 存储虚拟页号和物理页号映射的表</li> <li>最基本的虚拟地址转换为物理地址的步骤：</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   虚拟地址切分为页号和偏移量。32为系统高20位为页号，低12位为偏移量
+-   从页表，查询出对应的物理页号
+-   直接拿物理页号+偏移量得出物理地址。
+</code></pre></div></div> <ol> <li>多级页表</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   目的：
+    为了解决一级页表占用空间过大的问题。因为每个进程都有一张页表，32位系统每张一级页表4MB
+-   原理：
+    ![](../_resources/1A7F78B2-060C-4E40-BE79-F173EAD41698.png)
+    通常多级页表是一个n叉的结构，4级页表存储多条3级页表，3级页表有存储多条2级页表，一次类推。但多级页表充分利用了内存的连续性。从而减少了很多2级，3级页表的存储。也就减少了空间的占用。
+</code></pre></div></div> <h4 id="tlb"> <a href="#tlb" class="anchor-heading" aria-labelledby="tlb"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> TLB </h4> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  TLB
+    也是一块高速缓存，每个cpu都有一块这个芯片，也分为指令TLB和数据TLB.
+    也可以分成L1TLB和L2TLB
+2.  TLB
+    的作用是缓存虚拟地址到物理地址的转换结果(页表结果)，用来加速页表查询
+3.  内存转换是有mmu这样的硬件来执行的,和TLB的交互都是由mmu来控制
+    ![](../_resources/430F51CB-7A5E-4931-B2D3-F85F4A616DA1.png)
+</code></pre></div></div> <h4 id="安全与内存保护"> <a href="#安全与内存保护" class="anchor-heading" aria-labelledby="安全与内存保护"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 安全与内存保护 </h4> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  可执行空间保护：内存中除指令外，其他都不给与可执行权限，防止sql注入等漏洞
+2.  地址空间布局随机化：将固定的内存布局改为随机的。思想类似于密码加盐.
+    ![](../_resources/8F79F40C-3DD4-4265-AE0C-0252D54A0BB7.png) ### 2. I/O #### 总线
+</code></pre></div></div> <ol> <li>总线介绍： cpu里的内存接口，直接和系统总线通信，然后系统总线在接入一个i/o桥接器，这个桥接器一遍接入内存总线，一遍接入I/O总线 <img src="../_resources/5E38017C-EB5F-4FC1-9EA9-5BB6E2795829.png" alt="" /></li> <li>总线的分类：数据总线，控制总线，地址总线</li> <li>总线裁决：解决多个设备共用总线的机制</li> </ol> <h4 id="输入输出设备"> <a href="#输入输出设备" class="anchor-heading" aria-labelledby="输入输出设备"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 输入输出设备 </h4> <p>组成：接口和实际设备。 接口：cpu通过总线实际和接口相连。也就是说cpu通过硬件接口控制设备。接口包含三类寄存器：状态寄存器，命令寄存器，数据寄存器，数据缓冲区，和一个设备控制电路 cpu是如何控制I/O设备的:</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  CPU向I/O设备写入需要传输的数据。
+2.  cpu发送一个命令到接口的命令寄存器。控制电路会根据命令控制设备做出相应的操作。
+3.  cpu 从状态寄存器中感知当前设备所处的状态。、
+</code></pre></div></div> <p>cpu如何I/O设备通信：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  内存映射I/O(MMIO):
+    内存和I/O设备共用cpu的地址总线，因此访问内存的指令就就可以访问I/O。I/O设备只需要监听地址线获取自己需要的数据就好。
+2.  端口映射I/O(PMIO):
+    设备和内存不共享CPU的地址总线，而是有各自的地址空间也叫端口(抽象概念),这种方式一般cpu会提供专用的通信指令比如
+    in/out #### 机械硬盘    1.  机械硬盘的组成：盘面、磁头、悬臂    2.  硬盘的转数：每分钟旋转的圈数    3.  通常一个盘面有两个磁头，分别在正反两面    4.  硬盘随机访问的时间 = 平均延时（旋转盘面到指定扇区的时间）+
+   平均寻道时间（悬臂移动到特定磁道的扇区的时间一般4-10ms）    5.  硬盘的IOPS(每秒随机访问次数)= 1s/硬盘随机访问时间。    6.  根据场景提高性能
+  
+-   原理就是缩短上边的随机访问时间，也就是缩短平均延时和平均寻道时间。
+-   缩短平均寻到的方法一般是缩短定位磁道的行程，比如我们只用最外面的1/4或1/2磁道。
+    这样虽然缩短了定位磁道的行程，同时也减小了硬盘的容量。
+</code></pre></div></div> <h4 id="ssd固态硬盘"> <a href="#ssd固态硬盘" class="anchor-heading" aria-labelledby="ssd固态硬盘"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> SSD固态硬盘。 </h4> <ol> <li>基本组成：一个电容加一个电压计组合在一起，记录一个或多个比特。</li> <li>ssd分类：</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   SLC:
+    一个电容加电压计的基本组合单元只能记录一个比特，这种数据存储方式叫slc
+-   MLC: 一个电容能存储2个比特，TLC：一个电容里存储3个比特，QLC:
+    一个电容里存储4个比特。
+</code></pre></div></div> <ol> <li>硬件构成：从上到下分别为，接口电路，FTL(闪存转换层）实际的I/O设备(裸片、平面、BLOCK、Page) <img src="../_resources/7F304988-E745-4916-B65F-6FE7B4996F1B.png" alt="" /></li> <li>写入：必须先擦除再写入，不能覆写. 写入和读取的基本单位是页。擦除的基本单位是块。</li> <li>SSD的使用寿命就是每个块的擦写次数。SLC的擦写次数一般是10万次，MLC的擦写次数大概是一万次，TLC和QLC也就是几千次。</li> <li>SSD必须进行磁盘整理，因为SSD擦除是按块擦除的，随着数据的删除和写入。某些块会形成数据空洞。这就必须有磁盘整理功能。将有效数据搬移，然后整块擦除，以备再写。</li> <li>磨损均衡：</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   背景：
+    也就是说通过一定的机制让SSD将各个块的擦除次数，均匀的分摊到各个块上。FTL就是干这个的。
+-   FTL原理：类似于内存管理的页表，FTL存放了逻辑块地址到物理块地址的映射，操作系统通过逻辑地址访问硬盘，FTL将逻辑地址转换为对应的物理地址，同时FTL记录了每个块的擦写次数，当一个物理块擦写次数过多时，FTL可以更改逻辑地址映射到擦写次数少的物理块。对操作系统来说无感知。
+</code></pre></div></div> <ol> <li>TRIM指令：为了解决操作系统和SSD逻辑层块状态不匹配的问题，因为操作系统删除文件只是删除了inode，SSD逻辑层无法感知。因此当进行垃圾回收时由于不知道数据已经被删除。还会存在数据搬移动作，即消耗了性能，又缩短了使用寿命。 写入放大 = 实际的闪存写入数据量/系统通过FTL写入的数据量。写入放大机理就是随着SSD存储空间被占用的越来愈多，每一次写入新的数据，都由于存储空间不足不得不搬移大量的数据，从而造成性能变差。 9、优化点：</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-   尽量多读少写
+-   尽可能写一个较大的数据快，这样就不容易出现磁盘碎片
+-   持续的进行磁盘清理，确保有足够的空间进行写入。
+-   只用SSD硬盘的一半空间，尽可能的降低写放大。
+</code></pre></div></div> <h4 id="dma"> <a href="#dma" class="anchor-heading" aria-labelledby="dma"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DMA </h4> <ul> <li>什么是DMA: DMA可以理解为一个协处理器，帮助cpu完成对应的数据传输工作。cpu发送控制信息，告诉DMAC 从哪里到哪里传输多长的数据。具体的数据传输由DMA完成。</li> <li>总线上的设备类型：</li> </ul> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.  主设备： 只有主设备才能主动发起数据传输
+2.  从设备： 从设备只能被动的接受数据传输
+</code></pre></div></div> <ul> <li>DMAC即是主设备又是从设备</li> <li>kafka通过零拷贝的技术优化数据传输</li> </ul> <h4 id="硬件数据完整性"> <a href="#硬件数据完整性" class="anchor-heading" aria-labelledby="硬件数据完整性"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 硬件数据完整性 </h4> <ol> <li>单比特反转</li> <li>检测硬件数据反转的方法：采用有纠错检验的硬件，比如ECC内存。</li> <li>检错码：奇偶校验，缺点是只能检测一位</li> <li>纠错码：海明码</li> </ol> </main> </div> </div> <div class="search-overlay"></div> </div> <script src="https://cdn.jsdelivr.net/npm/mermaid@9.1.3/dist/mermaid.min.js"></script> <script> var config = {} ; mermaid.initialize(config); window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid')); </script> </body> </html>
